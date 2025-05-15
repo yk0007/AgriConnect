@@ -1,0 +1,14 @@
+
+project_id = "mrbjnkednllemtrafofj"
+
+[functions.diagnose-crop]
+verify_jwt = true
+
+[functions.update-groq-key]
+verify_jwt = true
+
+[functions.chat-with-groq]
+verify_jwt = false
+
+[functions.soil-analysis]
+verify_jwt = false

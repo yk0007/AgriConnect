@@ -1,0 +1,109 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 33% 98%;
+    --foreground: 220 10% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 10% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 10% 15%;
+
+    --primary: 142 72% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 14% 90%;
+    --secondary-foreground: 220 10% 15%;
+
+    --muted: 220 14% 95%;
+    --muted-foreground: 220 10% 45%;
+
+    --accent: 142 72% 95%;
+    --accent-foreground: 142 72% 29%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 220 14% 90%;
+    --input: 220 14% 90%;
+    --ring: 142 72% 29%;
+
+    --radius: 0.75rem;
+  }
+
+  .dark {
+    --background: 220 10% 10%;
+    --foreground: 0 0% 95%;
+
+    --card: 220 10% 13%;
+    --card-foreground: 0 0% 95%;
+
+    --popover: 220 10% 13%;
+    --popover-foreground: 0 0% 95%;
+
+    --primary: 142 72% 29%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 220 10% 16%;
+    --secondary-foreground: 0 0% 95%;
+
+    --muted: 220 10% 16%;
+    --muted-foreground: 220 10% 65%;
+
+    --accent: 142 72% 15%;
+    --accent-foreground: 142 72% 80%;
+
+    --destructive: 0 62% 30%;
+    --destructive-foreground: 0 0% 95%;
+
+    --border: 220 10% 20%;
+    --input: 220 10% 20%;
+    --ring: 142 72% 29%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .agri-card {
+    @apply bg-card rounded-lg border border-border shadow-sm transition-all hover:shadow-md;
+  }
+  
+  .agri-dash-card {
+    @apply agri-card p-4 flex flex-col h-full;
+  }
+  
+  .agri-stats-card {
+    @apply agri-card p-4 flex items-center justify-between;
+  }
+  
+  .fade-in {
+    @apply animate-in duration-500;
+  }
+  
+  .slide-in {
+    @apply animate-in slide-in-from-bottom-4 duration-500;
+  }
+  
+  .hover-scale {
+    @apply transition-transform hover:scale-[1.02] active:scale-[0.98];
+  }
+}
